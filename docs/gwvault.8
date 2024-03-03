@@ -3,22 +3,18 @@
 
 .SH NAME
 .PP
-gwvault \- encryption/decryption utility for Ansible data files
+gwvault - encryption/decryption utility for Ansible data files
 
 
 .SH SYNOPSIS
 .PP
 gwvault
 
-.PP
-.RS
+.EX
+[--new-vault-password-file]=[value]
+[--vault-password-file]=[value]
 
-.nf
-[\-\-new\-vault\-password\-file]=[value]
-[\-\-vault\-password\-file]=[value]
-
-.fi
-.RE
+.EE
 
 
 .SH COMMAND TREE
@@ -42,36 +38,32 @@ create
 view
 \[la]#view\[ra]
 .IP \(bu 2
-encrypt\_string, av\_encrypt\_string
-\[la]#encrypt_string-av_encrypt_string\[ra]
+encrypt_string, av_encrypt_string
+\[la]#encrypt_string\-av_encrypt_string\[ra]
 .IP \(bu 2
-install\-manpage
-\[la]#install-manpage\[ra]
+install-manpage
+\[la]#install\-manpage\[ra]
 .IP \(bu 2
 version, v
-\[la]#version-v\[ra]
+\[la]#version\-v\[ra]
 
 .RE
 
 .PP
 \fBUsage\fP:
 
-.PP
-.RS
-
-.nf
+.EX
 gwvault [GLOBAL OPTIONS] command [COMMAND OPTIONS] [ARGUMENTS...]
 
-.fi
-.RE
+.EE
 
 
 .SH GLOBAL OPTIONS
 .PP
-\fB\-\-new\-vault\-password\-file\fP="": new vault password file for rekey \fB\fCNEW\_VAULT\_PASSWORD\_FILE\fR
+\fB--new-vault-password-file\fP="": new vault password file for rekey \fBNEW_VAULT_PASSWORD_FILE\fR
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
 
 .SH COMMANDS
@@ -88,7 +80,7 @@ encrypt file
 .RE
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
 .SH decrypt
 .PP
@@ -103,11 +95,11 @@ decrypt file
 .RE
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
 .SH edit
 .PP
-edit file and re\-encrypt
+edit file and re-encrypt
 
 .PP
 .RS
@@ -118,11 +110,11 @@ edit file and re\-encrypt
 .RE
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
 .SH rekey
 .PP
-alter encryption password and re\-encrypt
+alter encryption password and re-encrypt
 
 .PP
 .RS
@@ -133,10 +125,10 @@ alter encryption password and re\-encrypt
 .RE
 
 .PP
-\fB\-\-new\-vault\-password\-file\fP="": new vault password file for rekey \fB\fCNEW\_VAULT\_PASSWORD\_FILE\fR
+\fB--new-vault-password-file\fP="": new vault password file for rekey \fBNEW_VAULT_PASSWORD_FILE\fR
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
 .SH create
 .PP
@@ -151,7 +143,7 @@ create a new encrypted file
 .RE
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
 .SH view
 .PP
@@ -166,27 +158,27 @@ view inputs of encrypted file
 .RE
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
-.SH encrypt\_string, av\_encrypt\_string
+.SH encrypt_string, av_encrypt_string
 .PP
-encrypt provided string, output in ansible\-vault format
+encrypt provided string, output in ansible-vault format
 
 .PP
 .RS
 
 .PP
-[options] string\_to\_encrypt
+[options] string_to_encrypt
 
 .RE
 
 .PP
-\fB\-\-name\fP="": variable name to encrypt
+\fB--name\fP="": variable name to encrypt
 
 .PP
-\fB\-\-vault\-password\-file\fP="": vault password file \fB\fCVAULT\_PASSWORD\_FILE\fR
+\fB--vault-password-file\fP="": vault password file \fBVAULT_PASSWORD_FILE\fR
 
-.SH install\-manpage
+.SH install-manpage
 .PP
 Generate and install man page
 
